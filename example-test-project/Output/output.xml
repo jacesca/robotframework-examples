@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.4 on win32)" generated="20240830 23:00:29.587" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests" source="C:\Users\Jacqueline\Documents\projects\RobotFramework\example-test-project\Tests">
+<suite id="s1-s1" name="TestCase1" source="C:\Users\Jacqueline\Documents\projects\RobotFramework\example-test-project\Tests\TestCase1.robot">
+<test id="s1-s1-t1" name="TEST1" line="12">
+<kw name="Count Files In Directory" library="OperatingSystem">
+<var>${files_Count}</var>
+<arg>c:\\</arg>
+<doc>Wrapper for `Count Items In Directory` returning only file count.</doc>
+<msg timestamp="20240830 23:00:29.619" level="TRACE">Arguments: [ 'c:\\' ]</msg>
+<msg timestamp="20240830 23:00:29.619" level="INFO" html="true">Listing contents of directory '&lt;a href="file://c:\"&gt;c:\&lt;/a&gt;'.</msg>
+<msg timestamp="20240830 23:00:29.619" level="INFO">8 files.</msg>
+<msg timestamp="20240830 23:00:29.619" level="TRACE">Return: 8</msg>
+<msg timestamp="20240830 23:00:29.619" level="INFO">${files_Count} = 8</msg>
+<status status="PASS" starttime="20240830 23:00:29.619" endtime="20240830 23:00:29.619"/>
+</kw>
+<tag>Critical</tag>
+<status status="PASS" starttime="20240830 23:00:29.619" endtime="20240830 23:00:29.619"/>
+</test>
+<test id="s1-s1-t2" name="TEST2" line="16">
+<kw name="Log" library="BuiltIn">
+<arg>This is a sample test case.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240830 23:00:29.619" level="TRACE">Arguments: [ 'This is a sample test case.' ]</msg>
+<msg timestamp="20240830 23:00:29.619" level="INFO">This is a sample test case.</msg>
+<msg timestamp="20240830 23:00:29.619" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.619" endtime="20240830 23:00:29.619"/>
+</kw>
+<tag>Low</tag>
+<status status="PASS" starttime="20240830 23:00:29.619" endtime="20240830 23:00:29.619"/>
+</test>
+<doc>This is my project Test Case</doc>
+<status status="PASS" starttime="20240830 23:00:29.619" endtime="20240830 23:00:29.619"/>
+</suite>
+<suite id="s1-s2" name="TestCase2" source="C:\Users\Jacqueline\Documents\projects\RobotFramework\example-test-project\Tests\TestCase2.robot">
+<test id="s1-s2-t1" name="TEST3" line="6">
+<kw name="Log" library="BuiltIn">
+<arg>This is my third test case</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240830 23:00:29.619" level="TRACE">Arguments: [ 'This is my third test case' ]</msg>
+<msg timestamp="20240830 23:00:29.619" level="INFO">This is my third test case</msg>
+<msg timestamp="20240830 23:00:29.619" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.619" endtime="20240830 23:00:29.619"/>
+</kw>
+<tag>Medium</tag>
+<status status="PASS" starttime="20240830 23:00:29.619" endtime="20240830 23:00:29.619"/>
+</test>
+<status status="PASS" starttime="20240830 23:00:29.619" endtime="20240830 23:00:29.619"/>
+</suite>
+<suite id="s1-s3" name="TestCase3-Variables" source="C:\Users\Jacqueline\Documents\projects\RobotFramework\example-test-project\Tests\TestCase3-Variables.robot">
+<test id="s1-s3-t1" name="TEST6" line="14">
+<kw name="Log" library="BuiltIn">
+<arg>${MY-VAR-1}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Arguments: [ 'My test variable 1' ]</msg>
+<msg timestamp="20240830 23:00:29.634" level="INFO">My test variable 1</msg>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${MY-VAR-2}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Arguments: [ 'My test variable 2' ]</msg>
+<msg timestamp="20240830 23:00:29.634" level="INFO">My test variable 2</msg>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${GOOGLE-SEARCH-FIELD}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Arguments: [ '//input[@title="Search"]' ]</msg>
+<msg timestamp="20240830 23:00:29.634" level="INFO">//input[@title="Search"]</msg>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${MY-LIST}[2]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Arguments: [ 'test3' ]</msg>
+<msg timestamp="20240830 23:00:29.634" level="INFO">test3</msg>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${MY-DICT}[firstname]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Arguments: [ 'demo' ]</msg>
+<msg timestamp="20240830 23:00:29.634" level="INFO">demo</msg>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</kw>
+<tag>Demo</tag>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</test>
+<status status="PASS" starttime="20240830 23:00:29.619" endtime="20240830 23:00:29.634"/>
+</suite>
+<suite id="s1-s4" name="TestCase4-Keywords" source="C:\Users\Jacqueline\Documents\projects\RobotFramework\example-test-project\Tests\TestCase4-Keywords.robot">
+<test id="s1-s4-t1" name="TEST7" line="30">
+<kw name="Log My Username">
+<arg>${MY-NEW-DICT}[username]</arg>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Arguments: [ ${USERNAME}='demo' ]</msg>
+<kw name="Log" library="BuiltIn">
+<arg>${USERNAME}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Arguments: [ 'demo' ]</msg>
+<msg timestamp="20240830 23:00:29.634" level="INFO">demo</msg>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</kw>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</kw>
+<kw name="Log My Password">
+<arg>${MY-NEW-DICT}[password]</arg>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Arguments: [ ${PASSWORD}='mode' ]</msg>
+<kw name="Log" library="BuiltIn">
+<arg>${PASSWORD}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Arguments: [ 'mode' ]</msg>
+<msg timestamp="20240830 23:00:29.634" level="INFO">mode</msg>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</kw>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</kw>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</test>
+<test id="s1-s4-t2" name="TEST8" line="34">
+<kw name="Log My Username and Password">
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Arguments: [  ]</msg>
+<kw name="Log My Username">
+<arg>${MY-NEW-DICT}[username]</arg>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Arguments: [ ${USERNAME}='demo' ]</msg>
+<kw name="Log" library="BuiltIn">
+<arg>${USERNAME}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Arguments: [ 'demo' ]</msg>
+<msg timestamp="20240830 23:00:29.634" level="INFO">demo</msg>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</kw>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</kw>
+<kw name="Log My Password">
+<arg>${MY-NEW-DICT}[password]</arg>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Arguments: [ ${PASSWORD}='mode' ]</msg>
+<kw name="Log" library="BuiltIn">
+<arg>${PASSWORD}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Arguments: [ 'mode' ]</msg>
+<msg timestamp="20240830 23:00:29.634" level="INFO">mode</msg>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</kw>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</kw>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</kw>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</test>
+<test id="s1-s4-t3" name="TEST9" line="37">
+<kw name="Log Specific Username and Password">
+<arg>${MY-NEW-DICT}[username]</arg>
+<arg>${MY-NEW-DICT}[password]</arg>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Arguments: [ ${USERNAME}='demo' | ${PASSWORD}='mode' ]</msg>
+<kw name="Log My Username">
+<arg>${USERNAME}</arg>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Arguments: [ ${USERNAME}='demo' ]</msg>
+<kw name="Log" library="BuiltIn">
+<arg>${USERNAME}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Arguments: [ 'demo' ]</msg>
+<msg timestamp="20240830 23:00:29.634" level="INFO">demo</msg>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</kw>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</kw>
+<kw name="Log My Password">
+<arg>${PASSWORD}</arg>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Arguments: [ ${PASSWORD}='mode' ]</msg>
+<kw name="Log" library="BuiltIn">
+<arg>${PASSWORD}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Arguments: [ 'mode' ]</msg>
+<msg timestamp="20240830 23:00:29.634" level="INFO">mode</msg>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</kw>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</kw>
+<msg timestamp="20240830 23:00:29.634" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</kw>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</test>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.634"/>
+</suite>
+<suite id="s1-s5" name="TestCase5-Resources" source="C:\Users\Jacqueline\Documents\projects\RobotFramework\example-test-project\Tests\TestCase5-Resources.robot">
+<test id="s1-s5-t1" name="TEST10" line="7">
+<kw name="Log Specific Username and Password" library="resources">
+<arg>${MY-NEW-DICT}[username]</arg>
+<arg>${MY-NEW-DICT}[password]</arg>
+<msg timestamp="20240830 23:00:29.650" level="TRACE">Arguments: [ ${USERNAME}='demo' | ${PASSWORD}='mode' ]</msg>
+<kw name="Log My Username" library="resources">
+<arg>${USERNAME}</arg>
+<msg timestamp="20240830 23:00:29.650" level="TRACE">Arguments: [ ${USERNAME}='demo' ]</msg>
+<kw name="Log" library="BuiltIn">
+<arg>${USERNAME}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240830 23:00:29.650" level="TRACE">Arguments: [ 'demo' ]</msg>
+<msg timestamp="20240830 23:00:29.650" level="INFO">demo</msg>
+<msg timestamp="20240830 23:00:29.650" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.650" endtime="20240830 23:00:29.650"/>
+</kw>
+<msg timestamp="20240830 23:00:29.650" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.650" endtime="20240830 23:00:29.650"/>
+</kw>
+<kw name="Log My Password" library="resources">
+<arg>${PASSWORD}</arg>
+<msg timestamp="20240830 23:00:29.650" level="TRACE">Arguments: [ ${PASSWORD}='mode' ]</msg>
+<kw name="Log" library="BuiltIn">
+<arg>${PASSWORD}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240830 23:00:29.650" level="TRACE">Arguments: [ 'mode' ]</msg>
+<msg timestamp="20240830 23:00:29.650" level="INFO">mode</msg>
+<msg timestamp="20240830 23:00:29.650" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.650" endtime="20240830 23:00:29.650"/>
+</kw>
+<msg timestamp="20240830 23:00:29.650" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.650" endtime="20240830 23:00:29.650"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Final message</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240830 23:00:29.650" level="TRACE">Arguments: [ 'Final message' ]</msg>
+<msg timestamp="20240830 23:00:29.650" level="INFO">Final message</msg>
+<msg timestamp="20240830 23:00:29.650" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.650" endtime="20240830 23:00:29.650"/>
+</kw>
+<msg timestamp="20240830 23:00:29.650" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.650" endtime="20240830 23:00:29.650"/>
+</kw>
+<status status="PASS" starttime="20240830 23:00:29.650" endtime="20240830 23:00:29.650"/>
+</test>
+<doc>How to use resources example</doc>
+<status status="PASS" starttime="20240830 23:00:29.634" endtime="20240830 23:00:29.650"/>
+</suite>
+<suite id="s1-s6" name="TestSuite" source="C:\Users\Jacqueline\Documents\projects\RobotFramework\example-test-project\Tests\TestSuite.robot">
+<test id="s1-s6-t1" name="TEST4" line="6">
+<kw name="Log" library="BuiltIn">
+<arg>This is a message from test case 4.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240830 23:00:29.650" level="TRACE">Arguments: [ 'This is a message from test case 4.' ]</msg>
+<msg timestamp="20240830 23:00:29.650" level="INFO">This is a message from test case 4.</msg>
+<msg timestamp="20240830 23:00:29.650" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.650" endtime="20240830 23:00:29.650"/>
+</kw>
+<tag>Critical</tag>
+<tag>Demo</tag>
+<status status="PASS" starttime="20240830 23:00:29.650" endtime="20240830 23:00:29.650"/>
+</test>
+<test id="s1-s6-t2" name="TEST5" line="11">
+<kw name="Log" library="BuiltIn">
+<arg>This is a message from test case 5.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240830 23:00:29.650" level="TRACE">Arguments: [ 'This is a message from test case 5.' ]</msg>
+<msg timestamp="20240830 23:00:29.650" level="INFO">This is a message from test case 5.</msg>
+<msg timestamp="20240830 23:00:29.650" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240830 23:00:29.650" endtime="20240830 23:00:29.650"/>
+</kw>
+<tag>MEdium</tag>
+<status status="PASS" starttime="20240830 23:00:29.650" endtime="20240830 23:00:29.650"/>
+</test>
+<status status="PASS" starttime="20240830 23:00:29.650" endtime="20240830 23:00:29.650"/>
+</suite>
+<status status="PASS" starttime="20240830 23:00:29.587" endtime="20240830 23:00:29.650"/>
+</suite>
+<statistics>
+<total>
+<stat pass="10" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">Critical</stat>
+<stat pass="2" fail="0" skip="0">Demo</stat>
+<stat pass="1" fail="0" skip="0">Low</stat>
+<stat pass="2" fail="0" skip="0">Medium</stat>
+</tag>
+<suite>
+<stat pass="10" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="TestCase1">Tests.TestCase1</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="TestCase2">Tests.TestCase2</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="TestCase3-Variables">Tests.TestCase3-Variables</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s4" name="TestCase4-Keywords">Tests.TestCase4-Keywords</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s5" name="TestCase5-Resources">Tests.TestCase5-Resources</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s6" name="TestSuite">Tests.TestSuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

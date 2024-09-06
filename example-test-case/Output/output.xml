@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.4 on win32)" generated="20240831 15:37:17.293" rpa="false" schemaversion="4">
+<suite id="s1" name="Valid" source="C:\Users\Jacqueline\Documents\projects\RobotFramework\example-test-case\valid.robot">
+<test id="s1-t1" name="Valid Login" line="12">
+<kw name="Open Browser To Login Page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Site-Url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240831 15:37:17.528" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8040/WebDemo/html/'.</msg>
+<status status="PASS" starttime="20240831 15:37:17.528" endtime="20240831 15:37:20.068"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Login Page</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20240831 15:37:20.070" level="INFO">Page title is 'Login Page'.</msg>
+<status status="PASS" starttime="20240831 15:37:20.068" endtime="20240831 15:37:20.070"/>
+</kw>
+<status status="PASS" starttime="20240831 15:37:17.528" endtime="20240831 15:37:20.070"/>
+</kw>
+<kw name="Type In Username">
+<arg>demo</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=username_field</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240831 15:37:20.070" level="INFO">Typing text 'demo' into text field 'id=username_field'.</msg>
+<status status="PASS" starttime="20240831 15:37:20.070" endtime="20240831 15:37:20.132"/>
+</kw>
+<status status="PASS" starttime="20240831 15:37:20.070" endtime="20240831 15:37:20.132"/>
+</kw>
+<kw name="Type In Password">
+<arg>mode</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password_field</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240831 15:37:20.132" level="INFO">Typing text 'mode' into text field 'id=password_field'.</msg>
+<status status="PASS" starttime="20240831 15:37:20.132" endtime="20240831 15:37:20.194"/>
+</kw>
+<status status="PASS" starttime="20240831 15:37:20.132" endtime="20240831 15:37:20.194"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240831 15:37:23.195" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240831 15:37:20.194" endtime="20240831 15:37:23.195"/>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=login_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240831 15:37:23.195" level="INFO">Clicking button 'id=login_button'.</msg>
+<status status="PASS" starttime="20240831 15:37:23.195" endtime="20240831 15:37:23.253"/>
+</kw>
+<status status="PASS" starttime="20240831 15:37:23.195" endtime="20240831 15:37:23.253"/>
+</kw>
+<kw name="Welcome Page should be Open">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Welcome Page</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20240831 15:37:23.257" level="INFO">Page title is 'Welcome Page'.</msg>
+<status status="PASS" starttime="20240831 15:37:23.253" endtime="20240831 15:37:23.257"/>
+</kw>
+<status status="PASS" starttime="20240831 15:37:23.253" endtime="20240831 15:37:23.257"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240831 15:37:26.257" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240831 15:37:23.257" endtime="20240831 15:37:26.257"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240831 15:37:26.257" endtime="20240831 15:37:28.507"/>
+</kw>
+<status status="PASS" starttime="20240831 15:37:17.528" endtime="20240831 15:37:28.507"/>
+</test>
+<doc>Simple example using SeleniumLibrary.</doc>
+<status status="PASS" starttime="20240831 15:37:17.293" endtime="20240831 15:37:28.507"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Valid">Valid</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

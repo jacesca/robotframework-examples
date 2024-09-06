@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.4 on win32)" generated="20240831 22:39:41.116" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests" source="C:\Users\Jacqueline\Documents\projects\RobotFramework\example-login-multifactor\Tests">
+<suite id="s1-s1" name="Mfa Login" source="C:\Users\Jacqueline\Documents\projects\RobotFramework\example-login-multifactor\Tests\mfa_login.robot">
+<kw name="New Browser" library="Browser" type="SETUP">
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20240831 22:39:41.848" level="TRACE">Arguments: [ browser=&lt;SupportedBrowsers.chromium: 1&gt; | headless=False ]</msg>
+<msg timestamp="20240831 22:39:41.854" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\Jacqueline\\Documents\\projects\\RobotFramework\\example-login-multifactor\\Output\\browser\\traces\\83df7784-95bb-403e-b619-4a23c88abeed"}</msg>
+<msg timestamp="20240831 22:39:41.994" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\Jacqueline\\Documents\\projects\\RobotFramework\\example-login-multifactor\\Output\\browser\\traces\\83df7784-95bb-403e-b619-4a23c88abeed"}</msg>
+<msg timestamp="20240831 22:39:41.994" level="TRACE">Return: 'browser=07f2b5db-35fd-4a3e-93bf-679a04d81674'</msg>
+<status status="PASS" starttime="20240831 22:39:41.848" endtime="20240831 22:39:41.994"/>
+</kw>
+<test id="s1-s1-t1" name="Login with MFA" line="16">
+<kw name="New Context" library="Browser" type="SETUP">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20240831 22:39:42.008" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20240831 22:39:42.008" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg timestamp="20240831 22:39:42.024" level="INFO">Successfully created context. </msg>
+<msg timestamp="20240831 22:39:42.024" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg timestamp="20240831 22:39:42.024" level="TRACE">Return: 'context=00b2c16a-01f8-43af-acfc-10d854e34e73'</msg>
+<status status="PASS" starttime="20240831 22:39:42.008" endtime="20240831 22:39:42.024"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://seleniumbase.io/realworld/login</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20240831 22:39:42.024" level="TRACE">Arguments: [ 'https://seleniumbase.io/realworld/login' ]</msg>
+<msg timestamp="20240831 22:39:43.189" level="INFO">Successfully initialized new page object and opened url: https://seleniumbase.io/realworld/login</msg>
+<msg timestamp="20240831 22:39:43.189" level="DEBUG">Video is not enabled.</msg>
+<msg timestamp="20240831 22:39:43.189" level="TRACE">Return: {'page_id': 'page=7d41c25b-2427-41ca-884f-160e95f1de38', 'video_path': ''}</msg>
+<status status="PASS" starttime="20240831 22:39:42.024" endtime="20240831 22:39:43.189"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>id=username</arg>
+<arg>demo_user</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20240831 22:39:43.189" level="TRACE">Arguments: [ 'id=username' | 'demo_user' ]</msg>
+<msg timestamp="20240831 22:39:43.189" level="INFO">Fills the text 'demo_user' in the given field.</msg>
+<msg timestamp="20240831 22:39:43.228" level="DEBUG">Fill text demo_user on id=username with force: false</msg>
+<msg timestamp="20240831 22:39:43.228" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240831 22:39:43.189" endtime="20240831 22:39:43.228"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>id=password</arg>
+<arg>secret_pass</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20240831 22:39:43.228" level="TRACE">Arguments: [ 'id=password' | 'secret_pass' ]</msg>
+<msg timestamp="20240831 22:39:43.229" level="INFO">Fills the text 'secret_pass' in the given field.</msg>
+<msg timestamp="20240831 22:39:43.239" level="DEBUG">Fill text secret_pass on id=password with force: false</msg>
+<msg timestamp="20240831 22:39:43.239" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240831 22:39:43.228" endtime="20240831 22:39:43.239"/>
+</kw>
+<kw name="Get Totp" library="totp">
+<var>${totp}</var>
+<arg>GAXG2MTEOR3DMMDG</arg>
+<msg timestamp="20240831 22:39:43.239" level="TRACE">Arguments: [ 'GAXG2MTEOR3DMMDG' ]</msg>
+<msg timestamp="20240831 22:39:43.239" level="TRACE">Return: '284923'</msg>
+<msg timestamp="20240831 22:39:43.239" level="INFO">${totp} = 284923</msg>
+<status status="PASS" starttime="20240831 22:39:43.239" endtime="20240831 22:39:43.239"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>id=totpcode</arg>
+<arg>${totp}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20240831 22:39:43.239" level="TRACE">Arguments: [ 'id=totpcode' | '284923' ]</msg>
+<msg timestamp="20240831 22:39:43.239" level="INFO">Fills the text '284923' in the given field.</msg>
+<msg timestamp="20240831 22:39:43.252" level="DEBUG">Fill text 284923 on id=totpcode with force: false</msg>
+<msg timestamp="20240831 22:39:43.252" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240831 22:39:43.239" endtime="20240831 22:39:43.252"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<arg>mfa-login.png</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20240831 22:39:43.252" level="TRACE">Arguments: [ 'mfa-login.png' ]</msg>
+<msg timestamp="20240831 22:39:43.418" level="DEBUG">Screenshot successfully captured to: C:\Users\Jacqueline\Documents\projects\RobotFramework\example-login-multifactor\Output\browser\screenshot\mfa-login.png.png</msg>
+<msg timestamp="20240831 22:39:43.418" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/mfa-login.png.png" target="_blank"&gt;&lt;img src="browser/screenshot/mfa-login.png.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240831 22:39:43.418" level="TRACE">Return: 'C:\\Users\\Jacqueline\\Documents\\projects\\RobotFramework\\example-login-multifactor\\Output\\browser\\screenshot\\mfa-login.png.png'</msg>
+<status status="PASS" starttime="20240831 22:39:43.252" endtime="20240831 22:39:43.418"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240831 22:39:43.418" level="TRACE">Arguments: [ '3s' ]</msg>
+<msg timestamp="20240831 22:39:46.418" level="INFO">Slept 3 seconds</msg>
+<msg timestamp="20240831 22:39:46.418" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240831 22:39:43.418" endtime="20240831 22:39:46.418"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>"Sign in"</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<msg timestamp="20240831 22:39:46.418" level="TRACE">Arguments: [ '"Sign in"' ]</msg>
+<msg timestamp="20240831 22:39:46.418" level="INFO">Clicks the element '"Sign in"'.</msg>
+<msg timestamp="20240831 22:39:46.418" level="DEBUG">Click options are: {"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}</msg>
+<msg timestamp="20240831 22:39:46.695" level="DEBUG">Clicked element: '"Sign in"' with options: '{"button": "left", "clickCount": 1, "force": false, "noWaitAfter": false, "trial": false}' successfully.</msg>
+<msg timestamp="20240831 22:39:46.695" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240831 22:39:46.418" endtime="20240831 22:39:46.695"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>h1</arg>
+<arg>==</arg>
+<arg>Welcome!</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240831 22:39:46.695" level="TRACE">Arguments: [ 'h1' | &lt;AssertionOperator.equal: '=='&gt; | 'Welcome!' ]</msg>
+<msg timestamp="20240831 22:39:46.757" level="DEBUG">Text received successfully.</msg>
+<msg timestamp="20240831 22:39:46.757" level="INFO">Text: 'Welcome!'</msg>
+<msg timestamp="20240831 22:39:46.757" level="DEBUG">Assertion polling statistics:
+First element asserted in: 0.06261181831359863 seconds
+Total tries: 1
+Elapsed time in retries 0.0 seconds</msg>
+<msg timestamp="20240831 22:39:46.757" level="TRACE">Return: 'Welcome!'</msg>
+<status status="PASS" starttime="20240831 22:39:46.695" endtime="20240831 22:39:46.757"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240831 22:39:46.757" level="TRACE">Arguments: [ '3s' ]</msg>
+<msg timestamp="20240831 22:39:49.758" level="INFO">Slept 3 seconds</msg>
+<msg timestamp="20240831 22:39:49.758" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240831 22:39:46.757" endtime="20240831 22:39:49.758"/>
+</kw>
+<kw name="Close Context" library="Browser" type="TEARDOWN">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes a Context.</doc>
+<msg timestamp="20240831 22:39:49.758" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20240831 22:39:49.761" level="DEBUG">[
+  {
+    "type": "chromium",
+    "id": "browser=07f2b5db-35fd-4a3e-93bf-679a04d81674",
+    "contexts": [
+      {
+        "type": "context",
+        "id": "context=00b2c16a-01f8-43af-acfc-10d854e34e73",
+        "activePage": "page=7d41c25b-2427-41ca-884f-160e95f1de38",
+        "pages": [
+          {
+            "type": "page",
+            "title": "Welcome / Demo App",
+            "url": "https://seleniumbase.io/realworld/",
+            "id": "page=7d41c25b-2427-41ca-884f-160e95f1de38",
+            "timestamp": 1725165582.126
+          }
+        ]
+      }
+    ],
+    "activeContext": "context=00b2c16a-01f8-43af-acfc-10d854e34e73",
+    "activeBrowser": true
+  }
+]</msg>
+<msg timestamp="20240831 22:39:49.761" level="INFO">Switching browser to CURRENT</msg>
+<msg timestamp="20240831 22:39:49.776" level="INFO">Returned active browser id. CURRENT</msg>
+<msg timestamp="20240831 22:39:49.776" level="INFO">Switching browser to browser=07f2b5db-35fd-4a3e-93bf-679a04d81674</msg>
+<msg timestamp="20240831 22:39:49.776" level="INFO">Successfully changed active browser: browser=07f2b5db-35fd-4a3e-93bf-679a04d81674</msg>
+<msg timestamp="20240831 22:39:49.776" level="INFO">Switching context to CURRENT in CURRENT</msg>
+<msg timestamp="20240831 22:39:49.776" level="INFO">Returned active context id: CURRENT</msg>
+<msg timestamp="20240831 22:39:49.776" level="INFO">Switching context to context=00b2c16a-01f8-43af-acfc-10d854e34e73 in CURRENT</msg>
+<msg timestamp="20240831 22:39:49.792" level="DEBUG">[
+  {
+    "type": "chromium",
+    "id": "browser=07f2b5db-35fd-4a3e-93bf-679a04d81674",
+    "contexts": [
+      {
+        "type": "context",
+        "id": "context=00b2c16a-01f8-43af-acfc-10d854e34e73",
+        "activePage": "page=7d41c25b-2427-41ca-884f-160e95f1de38",
+        "pages": [
+          {
+            "type": "page",
+            "title": "Welcome / Demo App",
+            "url": "https://seleniumbase.io/realworld/",
+            "id": "page=7d41c25b-2427-41ca-884f-160e95f1de38",
+            "timestamp": 1725165582.126
+          }
+        ]
+      }
+    ],
+    "activeContext": "context=00b2c16a-01f8-43af-acfc-10d854e34e73",
+    "activeBrowser": true
+  }
+]</msg>
+<msg timestamp="20240831 22:39:49.792" level="INFO">Successfully changed active context: context=00b2c16a-01f8-43af-acfc-10d854e34e73</msg>
+<msg timestamp="20240831 22:39:49.829" level="INFO">Successfully closed Context</msg>
+<msg timestamp="20240831 22:39:49.829" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240831 22:39:49.758" endtime="20240831 22:39:49.829"/>
+</kw>
+<status status="PASS" starttime="20240831 22:39:41.994" endtime="20240831 22:39:49.829"/>
+</test>
+<kw name="Close Browser" library="Browser" type="TEARDOWN">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20240831 22:39:49.829" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20240831 22:39:49.933" level="INFO">Closed browser</msg>
+<msg timestamp="20240831 22:39:49.933" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20240831 22:39:49.829" endtime="20240831 22:39:49.933"/>
+</kw>
+<status status="PASS" starttime="20240831 22:39:41.148" endtime="20240831 22:39:49.933"/>
+</suite>
+<status status="PASS" starttime="20240831 22:39:41.116" endtime="20240831 22:39:49.949"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Mfa Login">Tests.Mfa Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
